@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    // outDir - то куда производится сборка
+    "outDir": "./dist/",
+    // noImplicitAny указывает всегда ли нужно задавать типы или нет
+    "noImplicitAny": true,
+    // module - модульная система
+    "module": "ESNext",
+    // В target мы указываем версию стандарты EcmaScript
+    "target": "es5",
+    // jsx позволяет использовать jsx
+    "jsx": "react-jsx",
+    // allowJs позволяет компилятору использовать как js так и ts файлы
+    "allowJs": true,
+    "moduleResolution": "node",
+    // позволяет использовать дефолтные импорты со старыми баблиотеками
+    "allowSyntheticDefaultImports": true,
+    // esModuleInterop позволяет работать с пакетами, которые используют commonJs, как с обычными пакетами с помощью import require() module.exports
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
