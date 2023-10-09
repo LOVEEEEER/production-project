@@ -13,6 +13,10 @@
     // allowJs позволяет компилятору использовать как js так и ts файлы
     "allowJs": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // позволяет использовать дефолтные импорты со старыми баблиотеками
     "allowSyntheticDefaultImports": true,
     // esModuleInterop позволяет работать с пакетами, которые используют commonJs, как с обычными пакетами с помощью import require() module.exports
