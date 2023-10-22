@@ -14,4 +14,3 @@ export function classNames(
     ].join(' ');
 }
 
-// remove-btn hovered selectable pdg
