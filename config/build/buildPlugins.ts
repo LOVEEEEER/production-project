@@ -1,9 +1,10 @@
-import webpack from 'webpack';
+import webpack, {WebpackPluginInstance} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
+    const { paths, isDev } = options;
     return [
         new HtmlWebpackPlugin({
             template: paths.html,

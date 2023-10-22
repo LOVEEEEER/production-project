@@ -13,4 +13,3 @@ export function classNames(
             .map(([className]) => className),
     ].join(' ');
 }
-
