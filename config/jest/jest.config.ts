@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+const path = require('path')
+
 export default {
     clearMocks: true,
     testEnvironment: 'jsdom',
@@ -11,6 +13,9 @@ export default {
     ],
     moduleDirectories: [
         'node_modules',
+    ],
+    "modulePaths": [
+        "<rootDir>src"
     ],
     moduleFileExtensions: [
         'js',
@@ -132,7 +137,11 @@ export default {
     // setupFiles: [],
 
     // A list of paths to modules that run some code to configure or set up the testing framework before each test
-    // setupFilesAfterEnv: [],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        "\\.svg": path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    },
 
     // The number of seconds after which a test is considered as slow and reported as such in the results.
     // slowTestThreshold: 5,
